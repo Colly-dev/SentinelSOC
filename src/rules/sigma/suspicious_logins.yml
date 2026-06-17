@@ -1,0 +1,20 @@
+title: Login from Suspicious IP
+id: 45678901-4567-4567-4567-456789012345
+status: experimental
+description: Detects successful logins from known suspicious IP addresses.
+author: SentinelSOC
+date: 2024/01/01
+logsource:
+    product: windows
+    service: security
+detection:
+    selection:
+        EventID: 4624
+        IpAddress: '192.168.1.100'
+    condition: selection
+falsepositives:
+    - New administrative host
+level: high
+tags:
+    - attack.initial_access
+    - attack.t1078

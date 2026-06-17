@@ -1,0 +1,16 @@
+<dashboard>
+  <label>SentinelSOC Main Dashboard</label>
+  <row>
+    <panel>
+      <chart>
+        <title>Alerts by Severity</title>
+        <search>
+          <query>index=sentinelsoc | stats count by severity</query>
+          <earliest>-24h@h</earliest>
+          <latest>now</latest>
+        </search>
+        <option name="charting.chart">pie</option>
+      </chart>
+    </panel>
+  </row>
+</dashboard>

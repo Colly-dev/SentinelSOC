@@ -1,0 +1,15 @@
+__pycache__/
+*.pyc
+*.log
+.env
+venv/
+.pytest_cache/
+.vscode/
+*.swp
+*.swo
+*.bak
+*.tmp
+*.DS_Store
+*.env
+/logs/
+/data/sample_outputs/

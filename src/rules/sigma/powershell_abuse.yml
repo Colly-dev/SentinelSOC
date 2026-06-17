@@ -1,0 +1,23 @@
+title: Suspicious PowerShell Command Line
+id: 23456789-2345-2345-2345-234567890123
+status: experimental
+description: Detects suspicious PowerShell command line arguments.
+author: SentinelSOC
+date: 2024/01/01
+logsource:
+    product: windows
+    service: security
+detection:
+    selection:
+        CommandLine|contains:
+            - '-EncodedCommand'
+            - '-enc'
+            - 'Net.WebClient'
+            - 'Invoke-WebRequest'
+    condition: selection
+falsepositives:
+    - Legitimate administrative scripts
+level: high
+tags:
+    - attack.execution
+    - attack.t1059.001

@@ -1,0 +1,19 @@
+title: Brute Force Attack
+id: 12345678-1234-1234-1234-123456789012
+status: experimental
+description: Detects multiple failed login attempts from a single source IP.
+author: SentinelSOC
+date: 2024/01/01
+logsource:
+    product: windows
+    service: security
+detection:
+    selection:
+        EventID: 4625
+    condition: selection | count() > 5
+falsepositives:
+    - Administrative maintenance
+level: high
+tags:
+    - attack.credential_access
+    - attack.t1110

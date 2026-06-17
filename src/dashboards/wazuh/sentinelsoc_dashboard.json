@@ -1,0 +1,11 @@
+{
+  "title": "SentinelSOC Main Dashboard",
+  "description": "Wazuh dashboard for SentinelSOC",
+  "panels": [
+    {
+      "title": "Security Alerts",
+      "type": "table",
+      "query": "group:sentinelsoc"
+    }
+  ]
+}

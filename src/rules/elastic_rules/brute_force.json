@@ -1,0 +1,8 @@
+{
+  "name": "SentinelSOC - Brute Force Detection",
+  "type": "query",
+  "query": "event.code: 4625",
+  "threshold": 5,
+  "time_window": "15m",
+  "severity": "high"
+}

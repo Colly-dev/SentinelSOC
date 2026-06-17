@@ -1,0 +1,28 @@
+<!-- Basic Sysmon Configuration -->
+<Sysmon schemaversion="4.82">
+  <EventFiltering>
+    <ProcessCreate onmatch="exclude">
+      <Image condition="end with">:\windows\system32\svchost.exe</Image>
+      <Image condition="end with">:\windows\system32\wininit.exe</Image>
+      <Image condition="end with">:\windows\system32\services.exe</Image>
+    </ProcessCreate>
+    <ProcessCreate onmatch="include">
+      <ParentImage condition="contains">powershell.exe</ParentImage>
+      <CommandLine condition="contains">-EncodedCommand</CommandLine>
+    </ProcessCreate>
+    <NetworkConnect onmatch="exclude">
+      <Image condition="end with">:\windows\system32\svchost.exe</Image>
+      <DestinationPort condition="is">80</DestinationPort>
+      <DestinationPort condition="is">443</DestinationPort>
+    </NetworkConnect>
+    <NetworkConnect onmatch="include">
+      <DestinationPort condition="is">22</DestinationPort>
+      <DestinationPort condition="is">3389</DestinationPort>
+    </NetworkConnect>
+    <FileCreate onmatch="include">
+      <TargetFilename condition="end with">.exe</TargetFilename>
+      <TargetFilename condition="end with">.dll</TargetFilename>
+      <TargetFilename condition="end with">.ps1</TargetFilename>
+    </FileCreate>
+  </EventFiltering>
+</Sysmon>

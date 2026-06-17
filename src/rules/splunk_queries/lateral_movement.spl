@@ -1,0 +1,1 @@
+index=windows sourcetype=XmlWinEventLog:Microsoft-Windows-Sysmon/Operational | search lateral_movement

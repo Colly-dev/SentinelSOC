@@ -1,0 +1,88 @@
+
+log_sources:
+  windows_events:
+    enabled: true
+    path: "./data/sample_targets/sample_windows_events.json"
+  linux_syslog:
+    enabled: false
+    path: "./logs/collected/linux_syslog.log"
+  sysmon_logs:
+    enabled: false
+    path: "./logs/collected/sysmon_events.json"
+  auth_logs:
+    enabled: true
+    path: "./logs/collected/auth_logs.log"
+  powershell_logs:
+    enabled: true
+    path: "./logs/collected/powershell_logs.json"
+
+detection_rules:
+  brute_force:
+    enabled: true
+    threshold: 5
+    sigma_rule: "./src/rules/sigma/brute_force.yml"
+  powershell_abuse:
+    enabled: true
+    sigma_rule: "./src/rules/sigma/powershell_abuse.yml"
+  malware_behavior:
+    enabled: true
+    sigma_rule: "./src/rules/sigma/malware_behavior.yml"
+  suspicious_logins:
+    enabled: true
+    sigma_rule: "./src/rules/sigma/suspicious_logins.yml"
+  persistence_techniques:
+    enabled: false
+    sigma_rule: "./src/rules/sigma/persistence_detection.yml"
+  lateral_movement:
+    enabled: true
+    sigma_rule: "./src/rules/sigma/lateral_movement.yml"
+
+alert_thresholds:
+  low: 1
+  medium: 3
+  high: 5
+  critical: 10
+
+report_settings:
+  output_dir: "./docs/reports"
+  json_report_enabled: true
+  csv_report_enabled: true
+  html_report_enabled: true
+
+dashboard_settings:
+  kibana:
+    enabled: true
+    dashboard_files:
+      - "./src/dashboards/kibana/sentinelsoc_dashboard.ndjson"
+      - "./src/dashboards/kibana/detection_dashboard.ndjson"
+  splunk:
+    enabled: false
+    dashboard_files:
+      - "./src/dashboards/splunk/sentinelsoc_dashboard.xml"
+      - "./src/dashboards/splunk/detection_dashboard.xml"
+  wazuh:
+    enabled: false
+    dashboard_files:
+      - "./src/dashboards/wazuh/sentinelsoc_dashboard.json"
+      - "./src/dashboards/wazuh/detection_dashboard.json"
+
+logging:
+  level: "INFO"
+  console_output: true
+  file_output: true
+  log_dir: "./logs"
+  rotate_size: "10 MB"
+  rotate_count: 5
+
+attack_simulation:
+  brute_force:
+    enabled: true
+    intensity: "medium"
+  malware_execution:
+    enabled: false
+  powershell_attacks:
+    enabled: true
+  credential_access:
+    enabled: true
+  suspicious_activity:
+    enabled: true

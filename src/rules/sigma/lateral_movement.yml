@@ -1,0 +1,22 @@
+title: Remote Service Creation
+id: 56789012-5678-5678-5678-567890123456
+status: experimental
+description: Detects the creation of remote services, often used for lateral movement.
+author: SentinelSOC
+date: 2024/01/01
+logsource:
+    product: windows
+    service: system
+detection:
+    selection:
+        EventID: 7045
+        ServiceName|contains:
+            - 'PSEXESVC'
+            - 'winexesvc'
+    condition: selection
+falsepositives:
+    - Legitimate remote administration
+level: high
+tags:
+    - attack.lateral_movement
+    - attack.t1021.002
