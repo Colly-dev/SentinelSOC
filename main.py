@@ -2,24 +2,26 @@
 import argparse
 import sys
 from loguru import logger
-from colorama import Fore, Style
+from rich.console import Console
+from rich.text import Text
+from rich.panel import Panel
 
 from src.core.engine import SOCCoreEngine
 from src.utils.logger import setup_logging
 
+console = Console()
+
 def display_banner():
     """Displays the SentinelSOC ASCII art banner."""
-    banner = f"""{Fore.CYAN}
-   _____       __         __  .__           .__
-  /  _  \_  __ |  | __ ___/  |_|  |__   ____ |  |   ____  ____
- /  /_\  \|  |\/|  |/ // __ \   __\  |  \_/ __ \|  | _/ __ \/  _ \
-/    |    \  |_|  |\/\  ___/|  | |   Y  \  ___/|  |_\  ___/|  __/
-\____|__  /____/|__|   \___  >__| |___|  /\___  >____/\___  >____/
-        \/                 \/          \/     \/          \/
-
-    {Fore.GREEN}SentinelSOC - Open-Source Security Operations Center Simulation{Style.RESET_ALL}
-    """
-    print(banner)
+    banner = Text()
+    banner.append("\n  ███████╗███████╗███╗   ██╗████████╗██╗███╗   ██╗███████╗██╗      \n", style="bold red")
+    banner.append("  ██╔════╝██╔════╝████╗  ██║╚══██╔══╝██║████╗  ██║██╔════╝██║      \n", style="bold red")
+    banner.append("  ███████╗█████╗  ██╔██╗ ██║   ██║   ██║██╔██╗ ██║█████╗  ██║      \n", style="bold yellow")
+    banner.append("  ╚════██║██╔══╝  ██║╚██╗██║   ██║   ██║██║╚██╗██║██╔══╝  ██║      \n", style="bold yellow")
+    banner.append("  ███████║███████╗██║ ╚████║   ██║   ██║██║ ╚████║███████╗███████╗  \n", style="bold green")
+    banner.append("  ╚══════╝╚══════╝╚═╝  ╚═══╝   ╚═╝   ╚═╝╚═╝  ╚═══╝╚══════╝╚══════╝  \n", style="bold green")
+    banner.append("                      SOC Platform v1.0.0 | by collykip\n", style="dim")
+    console.print(Panel(banner, border_style="red", padding=(0, 2)))
 
 def main():
     """Main entry point for SentinelSOC CLI."""
