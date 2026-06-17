@@ -27,24 +27,39 @@ The platform follows a modular architecture:
 ## 🛠️ Installation
 
 ### Prerequisites
-- Python 3.12+
-- Docker & Docker Compose (for dashboard integrations)
+- **Python 3.12+**
+- **Docker & Docker Compose** (Required for Elasticsearch, Kibana, and Wazuh integrations)
+- **Git**
 
-### Setup
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/Colly-dev/SentinelSOC.git
-   cd SentinelSOC
-   ```
-2. Create and activate a virtual environment:
-   ```bash
-   python -m venv venv
-   source venv/bin/activate  # On Windows: venv\Scripts\activate
-   ```
-3. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
+### Setup & OS-Specific Instructions
+
+#### 1. Clone the Repository
+```bash
+git clone https://github.com/Colly-dev/SentinelSOC.git
+cd SentinelSOC
+```
+
+#### 2. Create and Activate Virtual Environment
+
+| Operating System | Command |
+|------------------|---------|
+| **Windows (CMD)** | `python -m venv venv` <br> `venv\Scripts\activate` |
+| **Windows (PowerShell)** | `python -m venv venv` <br> `.\venv\Scripts\Activate.ps1` |
+| **Linux / macOS** | `python3 -m venv venv` <br> `source venv/bin/activate` |
+
+#### 3. Install Dependencies
+Regardless of your OS, once the virtual environment is activated, run:
+```bash
+pip install -r requirements.txt
+```
+
+> **Note for Linux Users**: You might need to install `python3-venv` first if it's not present: `sudo apt install python3-venv`.
+
+#### 4. (Optional) Start Dashboard Services
+If you have Docker installed and want to use the integrated dashboards:
+```bash
+docker-compose -f docker/docker-compose.yml up -d
+```
 
 ## 📖 Usage
 
