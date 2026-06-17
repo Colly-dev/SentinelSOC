@@ -1,0 +1,7 @@
+[
+  {"EventID": 4625, "TargetUserName": "admin", "IpAddress": "192.168.1.50", "Status": "0xC000006D", "TimeGenerated": "2026-06-17T10:00:00Z"},
+  {"EventID": 4625, "TargetUserName": "admin", "IpAddress": "192.168.1.50", "Status": "0xC000006D", "TimeGenerated": "2026-06-17T10:00:05Z"},
+  {"EventID": 4625, "TargetUserName": "admin", "IpAddress": "192.168.1.50", "Status": "0xC000006D", "TimeGenerated": "2026-06-17T10:00:10Z"},
+  {"EventID": 4688, "NewProcessName": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe", "CommandLine": "powershell.exe -ExecutionPolicy Bypass -WindowStyle Hidden -EncodedCommand SQBFAFM="},
+  {"EventID": 4624, "TargetUserName": "admin", "IpAddress": "192.168.1.50", "Status": "0x0", "TimeGenerated": "2026-06-17T10:05:00Z"}
+]
