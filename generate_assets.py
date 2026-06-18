@@ -19,14 +19,14 @@ def run_command(description, command):
 
 def capture_banner():
     banner = Text()
-    banner.append("\n  ███████╗███████╗███╗   ██╗████████╗██╗███╗   ██╗███████╗██╗      \n", style="bold orange1")
-    banner.append("  ██╔════╝██╔════╝████╗  ██║╚══██╔══╝██║████╗  ██║██╔════╝██║      \n", style="bold orange1")
-    banner.append("  ███████╗█████╗  ██╔██╗ ██║   ██║   ██║██╔██╗ ██║█████╗  ██║      \n", style="bold orange1")
-    banner.append("  ╚════██║██╔══╝  ██║╚██╗██║   ██║   ██║██║╚██╗██║██╔══╝  ██║      \n", style="bold orange1")
-    banner.append("  ███████║███████╗██║ ╚████║   ██║   ██║██║ ╚████║███████╗███████╗  \n", style="bold orange1")
-    banner.append("  ╚══════╝╚══════╝╚═╝  ╚═══╝   ╚═╝   ╚═╝╚═╝  ╚═══╝╚══════╝╚══════╝  \n", style="bold orange1")
+    banner.append("\n  ███████╗███████╗███╗   ██╗████████╗██╗███╗   ██╗███████╗██╗      \n", style="bold deep_sky_blue1")
+    banner.append("  ██╔════╝██╔════╝████╗  ██║╚══██╔══╝██║████╗  ██║██╔════╝██║      \n", style="bold deep_sky_blue1")
+    banner.append("  ███████╗█████╗  ██╔██╗ ██║   ██║   ██║██╔██╗ ██║█████╗  ██║      \n", style="bold deep_sky_blue1")
+    banner.append("  ╚════██║██╔══╝  ██║╚██╗██║   ██║   ██║██║╚██╗██║██╔══╝  ██║      \n", style="bold deep_sky_blue1")
+    banner.append("  ███████║███████╗██║ ╚████║   ██║   ██║██║ ╚████║███████╗███████╗  \n", style="bold deep_sky_blue1")
+    banner.append("  ╚══════╝╚══════╝╚═╝  ╚═══╝   ╚═╝   ╚═╝╚═╝  ╚═══╝╚══════╝╚══════╝  \n", style="bold deep_sky_blue1")
     banner.append("                      SOC Platform v1.0.0 | by Colly-dev\n", style="dim")
-    console.print(Panel(banner, border_style="orange1", padding=(0, 2)))
+    console.print(Panel(banner, border_style="deep_sky_blue1", padding=(0, 2)))
     console.save_svg("docs/screenshots/banner_terminal.svg", theme=MONOKAI)
     print("Banner SVG generated at docs/screenshots/banner_terminal.svg")
 
