@@ -1,8 +1,33 @@
 # SentinelSOC 🛡️
+### Elite Security Operations & Automated Detection Framework
 
-[![SentinelSOC CI](https://github.com/Colly-dev/SentinelSOC/actions/workflows/ci.yml/badge.svg)](https://github.com/Colly-dev/SentinelSOC/actions/workflows/ci.yml)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python Version](https://img.shields.io/badge/python-3.12%2B-blue.svg)](https://www.python.org/downloads/release/python-3120/)
+[![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
+[![Security Status](https://img.shields.io/badge/security-hardened-blue.svg)](https://github.com/Colly-dev/SentinelSOC)
+
+```text
+  ███████╗███████╗███╗   ██╗████████╗██╗███╗   ██╗███████╗██╗      
+  ██╔════╝██╔════╝████╗  ██║╚══██╔══╝██║████╗  ██║██╔════╝██║      
+  ███████╗█████╗  ██╔██╗ ██║   ██║   ██║██╔██╗ ██║█████╗  ██║      
+  ╚════██║██╔══╝  ██║╚██╗██║   ██║   ██║██║╚██╗██║██╔══╝  ██║      
+  ███████║███████╗██║ ╚████║   ██║   ██║██║ ╚████║███████╗███████╗ 
+  ╚══════╝╚══════╝╚═╝  ╚═══╝   ╚═╝   ╚═╝╚═╝  ╚═══╝╚══════╝╚══════╝ 
+               SOC Platform v1.0.0 | by Colly-dev
+```
+
+## ⚠️ LEGAL DISCLAIMER
+**SentinelSOC is designed for EDUCATIONAL PURPOSES and AUTHORIZED SECURITY MONITORING ONLY.**
+
+By using this software, you agree to:
+*   **ONLY** monitor systems you own or have explicit written permission to analyze.
+*   **COMPLY** with all applicable laws and regulations in your jurisdiction.
+*   **ACCEPT** full responsibility for your actions.
+*   **NOT** use this tool for illegal or unauthorized surveillance.
+*   **NOT** use detection data for malicious purposes.
+
+The authors assume **NO LIABILITY** for any misuse of this platform.
+
+---
 
 **SentinelSOC** is a production-grade, Python-powered Security Operations Center (SOC) simulation platform designed to demonstrate real-world blue team, detection engineering, threat hunting, and security monitoring capabilities.
 

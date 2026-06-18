@@ -12,16 +12,23 @@ from src.utils.logger import setup_logging
 console = Console()
 
 def display_banner():
-    """Displays the SentinelSOC ASCII art banner."""
+    """Displays the SentinelSOC ASCII art banner and disclaimer."""
     banner = Text()
     banner.append("\n  ███████╗███████╗███╗   ██╗████████╗██╗███╗   ██╗███████╗██╗      \n", style="bold deep_sky_blue1")
     banner.append("  ██╔════╝██╔════╝████╗  ██║╚══██╔══╝██║████╗  ██║██╔════╝██║      \n", style="bold deep_sky_blue1")
     banner.append("  ███████╗█████╗  ██╔██╗ ██║   ██║   ██║██╔██╗ ██║█████╗  ██║      \n", style="bold deep_sky_blue1")
-    banner.append("  ╚════██║██╔══╝  ██║╚██╗██║   ██║   ██║██║╚██╗██║██╔══╝  ██║      \n", style="bold deep_sky_blue1")
-    banner.append("  ███████║███████╗██║ ╚████║   ██║   ██║██║ ╚████║███████╗███████╗  \n", style="bold deep_sky_blue1")
-    banner.append("  ╚══════╝╚══════╝╚═╝  ╚═══╝   ╚═╝   ╚═╝╚═╝  ╚═══╝╚══════╝╚══════╝  \n", style="bold deep_sky_blue1")
-    banner.append("                      SOC Platform v1.0.0 | by Colly-dev\n", style="dim")
+    banner.append("  ╚════██║██╔══╝  ██║╚██╗██║   ██║   ██║██║╚██╗██║██╔══╝  ██║      \n", style="bold yellow")
+    banner.append("  ███████║███████╗██║ ╚████║   ██║   ██║██║ ╚████║███████╗███████╗  \n", style="bold yellow")
+    banner.append("  ╚══════╝╚══════╝╚═╝  ╚═══╝   ╚═╝   ╚═╝╚═╝  ╚═══╝╚══════╝╚══════╝  \n", style="bold yellow")
+    banner.append("\n          [ Elite Security Operations & Detection Framework ]\n", style="bold white")
+    banner.append("                 SOC Platform v1.0.0 | by Colly-dev\n", style="dim")
+    
+    disclaimer = Text()
+    disclaimer.append("\n[!] LEGAL DISCLAIMER: This tool is for EDUCATIONAL and AUTHORIZED\n", style="bold red")
+    disclaimer.append("security monitoring purposes only. Unauthorized use is strictly prohibited.\n", style="bold red")
+    
     console.print(Panel(banner, border_style="deep_sky_blue1", padding=(0, 2)))
+    console.print(disclaimer, justify="center")
 
 def main():
     """Main entry point for SentinelSOC CLI."""
