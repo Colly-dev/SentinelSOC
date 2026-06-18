@@ -19,14 +19,14 @@ def run_command(description, command):
 
 def capture_banner():
     banner = Text()
-    banner.append("\n  ███████╗███████╗███╗   ██╗████████╗██╗███╗   ██╗███████╗██╗      \n", style="bold red")
-    banner.append("  ██╔════╝██╔════╝████╗  ██║╚══██╔══╝██║████╗  ██║██╔════╝██║      \n", style="bold red")
-    banner.append("  ███████╗█████╗  ██╔██╗ ██║   ██║   ██║██╔██╗ ██║█████╗  ██║      \n", style="bold yellow")
-    banner.append("  ╚════██║██╔══╝  ██║╚██╗██║   ██║   ██║██║╚██╗██║██╔══╝  ██║      \n", style="bold yellow")
-    banner.append("  ███████║███████╗██║ ╚████║   ██║   ██║██║ ╚████║███████╗███████╗  \n", style="bold green")
-    banner.append("  ╚══════╝╚══════╝╚═╝  ╚═══╝   ╚═╝   ╚═╝╚═╝  ╚═══╝╚══════╝╚══════╝  \n", style="bold green")
-    banner.append("                      SOC Platform v1.0.0 | by collykip\n", style="dim")
-    console.print(Panel(banner, border_style="red", padding=(0, 2)))
+    banner.append("\n  ███████╗███████╗███╗   ██╗████████╗██╗███╗   ██╗███████╗██╗      \n", style="bold orange3")
+    banner.append("  ██╔════╝██╔════╝████╗  ██║╚══██╔══╝██║████╗  ██║██╔════╝██║      \n", style="bold orange3")
+    banner.append("  ███████╗█████╗  ██╔██╗ ██║   ██║   ██║██╔██╗ ██║█████╗  ██║      \n", style="bold orange3")
+    banner.append("  ╚════██║██╔══╝  ██║╚██╗██║   ██║   ██║██║╚██╗██║██╔══╝  ██║      \n", style="bold orange3")
+    banner.append("  ███████║███████╗██║ ╚████║   ██║   ██║██║ ╚████║███████╗███████╗  \n", style="bold orange3")
+    banner.append("  ╚══════╝╚══════╝╚═╝  ╚═══╝   ╚═╝   ╚═╝╚═╝  ╚═══╝╚══════╝╚══════╝  \n", style="bold orange3")
+    banner.append("                      SOC Platform v1.0.0 | by Colly-dev\n", style="dim")
+    console.print(Panel(banner, border_style="orange3", padding=(0, 2)))
     console.save_svg("docs/screenshots/banner_terminal.svg", theme=MONOKAI)
     print("Banner SVG generated at docs/screenshots/banner_terminal.svg")
 
